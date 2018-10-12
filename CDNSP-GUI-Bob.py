@@ -194,6 +194,12 @@ except ImportError:
     from PIL import Image, ImageTk
 
 try:
+    from pydrive.drive import GoogleDrive   
+except ImportError:
+    install_module("pydrive")
+    from pydrive.drive import GoogleDrive
+
+try:
     from bs4 import BeautifulSoup
 except ImportError:
     install_module("beautifulsoup4")
